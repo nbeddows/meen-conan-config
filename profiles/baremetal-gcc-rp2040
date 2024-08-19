@@ -12,7 +12,7 @@ os=baremetal
 &:with_rp2040=True
 unity*:fPIC=False
 [conf]
-tools.cmake.cmaketoolchain:user_toolchain+={{profile_dir}}/rp2040_vars.cmake
+tools.cmake.cmaketoolchain:user_toolchain+={{profile_dir}}/baremetal-gcc-rp2040-vars.cmake
 # Required for pi pico sdk 2.x
 #tools.build:defines=["__ARM_ARCH_6M__"]
 tools.build:cflags=["-mcpu=cortex-m0-mthumb", "-march=armv6-m"]
