@@ -15,8 +15,8 @@ unity*:fPIC=False
 tools.cmake.cmaketoolchain:user_toolchain+={{profile_dir}}/baremetal-gcc-rp2040-vars.cmake
 # Required for pi pico sdk 2.x
 #tools.build:defines=["__ARM_ARCH_6M__"]
-tools.build:cflags=["-mcpu=cortex-m0-mthumb", "-march=armv6-m"]
-tools.build:cxxflags=["-mcpu=cortex-m0-mthumb", "-march=armv6-m"]
+tools.build:cflags=["-mcpu=cortex-m0 -mthumb", "-march=armv6-m"]
+tools.build:cxxflags=["-mcpu=cortex-m0 -mthumb", "-march=armv6-m"]
 [buildenv]
 CC=arm-none-eabi-gcc
 CXX=arm-none-eabi-g++
