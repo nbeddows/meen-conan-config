@@ -1,0 +1,11 @@
+{% set os, arch, compiler, compiler_version = profile_name.split('-') %}
+[settings]
+os={{ os }}
+arch={{ arch }}
+compiler={{ compiler }}
+compiler.version={{ compiler_version }}
+compiler.cppstd=20
+compiler.runtime=dynamic
+build_type=Release
+[conf]
+tools.build:skip_test=True
