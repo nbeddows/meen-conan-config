@@ -1,0 +1,6 @@
+{% set os, arch, compiler, compiler_version, framework = profile_name.split('-') %}
+include({{ os }}-{{ arch }}-{{ compiler }}-{{ compiler_version }})
+[conf]
+tools.build:skip_test=False
+[options]
+{{ framework }}/*:build_gmock=False
