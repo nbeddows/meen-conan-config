@@ -1,0 +1,15 @@
+{% set os, arch, compiler, compiler_version = profile_name.split('-') %}
+[settings]
+os={{ os }}
+arch={{ arch }}
+compiler={{ compiler }}
+compiler.version={{ compiler_version }}
+compiler.cppstd=gnu20
+compiler.libcxx=libstdc++11
+build_type=Release
+[conf]
+tools.build:skip_test=True
+[buildenv]
+CC=aarch64-linux-gnu-gcc-{{ compiler_version }}
+CXX=aarch64-linux-gnu-g++-{{ compiler_version }}
+LD=aarch64-linux-gnu-ld
