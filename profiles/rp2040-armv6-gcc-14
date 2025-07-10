@@ -10,14 +10,13 @@ build_type=Release
 [conf]
 tools.build:skip_test=True
 tools.cmake.cmaketoolchain:user_toolchain+={{ profile_dir }}/{{ arch }}-vars.cmake
-# Required for pi pico sdk 2.x
-#tools.build:defines=["__ARM_ARCH_6M__"]
+tools.build:defines=["__ARM_ARCH_6M__"]
 tools.build:cflags=["-mcpu=cortex-m0 -mthumb", "-march=armv6-m"]
 tools.build:cxxflags=["-mcpu=cortex-m0 -mthumb", "-march=armv6-m"]
 [options]
 &:fPIC=False
 &:shared=False
 [buildenv]
-CC=arm-none-eabi-gcc-{{ compiler_version }}.2.1
+CC=arm-none-eabi-gcc-{{ compiler_version }}
 CXX=arm-none-eabi-g++
 LD=arm-none-eabi-ld
