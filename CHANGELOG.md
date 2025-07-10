@@ -1,3 +1,6 @@
+0.2.1 [10/07/25]
+- Added Pico 2.x.x sdk support to the rp2040 profiles.
+
 0.2.0 [01/07/25]
 * Added support for the following profiles:
 - Linux-armv7hf-gcc-14
