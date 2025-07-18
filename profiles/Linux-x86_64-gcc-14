@@ -9,6 +9,3 @@ compiler.libcxx=libstdc++11
 build_type=Release
 [conf]
 tools.build:skip_test=True
-[buildenv]
-CC=gcc-{{ compiler_version }}
-CXX=g++-{{ compiler_version }}

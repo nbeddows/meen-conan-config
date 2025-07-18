@@ -18,6 +18,6 @@ tools.build:cxxflags=["-mcpu=cortex-m0 -mthumb", "-march=armv6-m"]
 &:shared=False
 &:with_board={{ board }}
 [buildenv]
-CC=arm-none-eabi-gcc-{{ compiler_version }}
+CC=arm-none-eabi-gcc
 CXX=arm-none-eabi-g++
 LD=arm-none-eabi-ld
