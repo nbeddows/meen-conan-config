@@ -1,4 +1,4 @@
-{% set os, arch, compiler, compiler_version = profile_name.split('-') %}
+{% set board, arch, compiler, compiler_version = profile_name.split('-') %}
 [settings]
 os=baremetal
 arch={{ arch }}
@@ -16,6 +16,7 @@ tools.build:cxxflags=["-mcpu=cortex-m0 -mthumb", "-march=armv6-m"]
 [options]
 &:fPIC=False
 &:shared=False
+&:with_board={{ board }}
 [buildenv]
 CC=arm-none-eabi-gcc-{{ compiler_version }}
 CXX=arm-none-eabi-g++
