@@ -10,6 +10,6 @@ build_type=Release
 [conf]
 tools.build:skip_test=True
 [buildenv]
-CC=arm-linux-gnueabihf-gcc-{{ compiler_version }}
-CXX=arm-linux-gnueabihf-g++-{{ compiler_version }}
+CC=arm-linux-gnueabihf-gcc
+CXX=arm-linux-gnueabihf-g++
 LD=arm-linux-gnueabihf-ld
