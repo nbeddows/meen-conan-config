@@ -1,6 +1,7 @@
 0.3.0 [18/07/25]
 - Renamed rp2040 profiles pico
 - Added profile options `with_board` and `with_framework`.
+- Removed the `gcc-13` profiles.
 
 0.2.1 [10/07/25]
 - Added Pico 2.x.x sdk support to the rp2040 profiles.
